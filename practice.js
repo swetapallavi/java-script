@@ -143,11 +143,69 @@ const countFive = (arr) => {
     return count;
 }
 
+// function noSpace (str) {
+//     let arr = str.split(" ");
+//     let strr = "";
+//    for (let index = 0; index < arr.length; index++) {
+//        strr = strr + arr[index];
+//    }
+//    return strr;
+// }
+
 function noSpace (str) {
-    let arr = str.split(" ");
-    let strr = "";
-   for (let index = 0; index < arr.length; index++) {
-       strr = strr + arr[index];
-   }
-   return strr;
-}
+    return str.split(" ").join("");
+ }
+
+ function greaterThanFive(intarr) {
+     for (let index = 0; index < intarr.length; index++) {
+         if (intarr[index]<5) {
+             return false;
+         } 
+         
+     }
+     return true;
+ }
+
+ const greaterThanX = (intarr,x) => {
+    for (let index = 0; index < intarr.length; index++) {
+        if (intarr[index]<x) {
+            return false;
+        } 
+        
+    }
+    return true;
+ }
+
+ const lessThanX = (intarr,x) => {
+    for (let index = 0; index < intarr.length; index++) {
+        if (intarr[index]>x) {
+            return false;
+        } 
+        
+    }
+    return true;
+ }
+
+ function inRange (arr,x,y) {
+     if (x>y) {
+         console.log("error");
+     } else if (greaterThanX(arr,x) && lessThanX(arr,y)){
+         console.log("In range");
+    } else {
+        console.log("Out of range");
+    }
+ }
+ 
+ function double (numarr){
+    for (let index = 0; index < numarr.length; index++) {
+        numarr[index] = numarr[index]*2;
+    }
+    return numarr;
+ }
+
+ const doubleAndIncrease = (numarr) => {
+    double (numarr) & increase (numarr);
+    return numarr;
+ }
+
+ console.log(doubleAndIncrease([1,2,3,4]));

@@ -1,12 +1,24 @@
-const countVowel = (str) => {
-    let vowel = 0;
-    for (let index = 0; index < str.length; index++) {
-       if (str.charAt(index)==="a"||str.charAt(index)==="e"||str.charAt(index)==="i"||str.charAt(index)==="o"||str.charAt(index)==="u") {
-           vowel = vowel + 1;
-       }
+function increase (arr){
+    for (let index = 0; index < arr.length; index++) {
+        arr[index] = arr[index]+5;
     }
-    return vowel;
-}
+    return arr;
+ }
+
+ function double (numarr){
+    for (let index = 0; index < numarr.length; index++) {
+        numarr[index] = numarr[index]*2;
+    }
+    return numarr;
+ }
+
+ const doubleAndIncrease = (numarr) => {
+    let a = double (numarr) ;
+    let b = increase (a);
+    return b;
 
 
- console.log (countVowel("Ignatious  Roudreguizze"));
+    -
+ }
+
+ console.log(doubleAndIncrease([1,2,3,4]));
